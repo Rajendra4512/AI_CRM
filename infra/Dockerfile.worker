@@ -1,0 +1,25 @@
+FROM python:3.11-slim
+
+ENV PYTHONUNBUFFERED=1 \
+    PYTHONDONTWRITEBYTECODE=1
+
+WORKDIR /app
+
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    curl \
+    libpq-dev \
+    gcc \
+    && rm -rf /var/lib/apt/lists/*
+
+COPY requirements-core.txt .
+COPY requirements-ai.txt .
+RUN pip install --no-cache-dir -r requirements-core.txt -r requirements-ai.txt
+
+COPY core/ ./core/
+COPY packages/ ./packages/
+COPY modules/ ./modules/
+COPY ai/ ./ai/
+COPY workers/ ./workers/
+
+CMD ["celery", "-A", "workers.ingestion", "worker", "--loglevel=info", "--concurrency=2"]
+

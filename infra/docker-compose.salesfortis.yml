@@ -1,0 +1,39 @@
+version: '3.8'
+
+services:
+  salesfortis:
+    build:
+      context: ..
+      dockerfile: infra/Dockerfile
+    container_name: salesfortis-app
+    ports:
+      - "5000:5000"
+    volumes:
+      - salesfortis_pgdata:/var/lib/postgresql/data
+      - salesfortis_redis:/data
+      - salesfortis_qdrant:/qdrant/storage
+      - salesfortis_uploads:/app/uploads
+      - salesfortis_mlflow:/mlflow
+    environment:
+      - APP_NAME=SalesFortis
+      - ENVIRONMENT=development
+      - DATABASE_URL=postgresql://salesfortis:salesfortis@localhost:5432/salesfortis
+      - REDIS_URL=redis://localhost:6379
+      - QDRANT_URL=http://localhost:6333
+      - SECRET_KEY=change-me-in-production
+    deploy:
+      resources:
+        limits:
+          cpus: '4'
+          memory: 8G
+        reservations:
+          cpus: '2'
+          memory: 4G
+    restart: unless-stopped
+
+volumes:
+  salesfortis_pgdata:
+  salesfortis_redis:
+  salesfortis_qdrant:
+  salesfortis_uploads:
+  salesfortis_mlflow:

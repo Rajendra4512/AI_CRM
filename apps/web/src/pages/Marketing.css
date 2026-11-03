@@ -1,0 +1,118 @@
+.marketing-container {
+  min-height: 100vh;
+}
+
+.marketing-header {
+  background: white;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  padding: 1rem 2rem;
+}
+
+.nav-bar {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo-small {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  cursor: pointer;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #1e293b;
+}
+
+.back-btn {
+  background: none;
+  border: 1px solid #cbd5e1;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  color: #475569;
+}
+
+.back-btn:hover {
+  background: #f1f5f9;
+}
+
+.marketing-main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.marketing-hero {
+  text-align: center;
+  padding: 4rem 2rem;
+  background: linear-gradient(135deg, #2563eb 0%, #1e40af 100%);
+  color: white;
+  border-radius: 12px;
+  margin-bottom: 3rem;
+}
+
+.marketing-hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.hero-subtitle {
+  font-size: 1.25rem;
+  margin-bottom: 2rem;
+  opacity: 0.95;
+}
+
+.cta-btn {
+  background: white;
+  color: #2563eb;
+  border: none;
+  padding: 0.875rem 2rem;
+  font-size: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.cta-btn:hover {
+  background: #f1f5f9;
+}
+
+.features-section h2 {
+  text-align: center;
+  font-size: 2rem;
+  color: #1e293b;
+  margin-bottom: 2rem;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.feature-card {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 10px;
+  border: 1px solid #e2e8f0;
+}
+
+.feature-card h3 {
+  color: #1e293b;
+  margin-bottom: 0.5rem;
+}
+
+.feature-card p {
+  color: #64748b;
+  line-height: 1.6;
+}
+
+.marketing-footer {
+  text-align: center;
+  padding: 2rem;
+  color: #64748b;
+  margin-top: 3rem;
+}
