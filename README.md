@@ -1,23 +1,57 @@
 # SalesFortis - AI-Native Multi-Vertical CRM SaaS
 
-Single container monolithic application.
+Commercial-grade, AI-native CRM tailored for specialized industry verticals:
+1. **Construction & Trade Subcontractors** (RFQs, Change Orders, Submittals, Estimates)
+2. **Clinical Trials & CTMS** (Protocols, Site Feasibility, Patient Consent & Prescreening)
+3. **Maritime Logistics & Freight Brokerage** (Rate Sheets, Bookings, Milestones, Bills of Lading)
 
-## Architecture
-- Marketing Website: http://localhost:5000
-- Application: http://app.localhost:5000
-- API: http://localhost:5000/api/v1
+---
 
-## Tech Stack
-- Frontend: React 19 + TypeScript + Vite
-- Backend: FastAPI (Python)
-- Database: PostgreSQL
-- Cache/Queue: Redis
-- Vector DB: Qdrant
-- AI Gateway: LiteLLM
-- ML Tracking: MLflow
+## Architecture & Tech Stack
 
-## Quick Start
+- **Frontend**: React 19 + TypeScript + Vite (Marketing Pages & `/app/*` CRM Portal)
+- **Backend API**: FastAPI (Python 3.11) with Pydantic v2 validation & CORS
+- **Database**: PostgreSQL (with SQLAlchemy ORM & Multi-tenant schema)
+- **Cache & Async Queue**: Redis & Celery
+- **Automated Testing**: 
+  - Playwright E2E browser test suite (`apps/web/e2e/crm_flow.spec.ts`)
+  - Pytest API & background worker test suite (`tests/`)
+
+---
+
+## Quick Start (Local Development)
+
+### 1. Backend API
 ```bash
-docker-compose -f infra/docker-compose.salesfortis.yml build
-docker-compose -f infra/docker-compose.salesfortis.yml up -d
+# Install core dependencies
+pip install -r requirements-core.txt
+
+# Run FastAPI with live reload
+uvicorn apps.api.main:app --reload --port 8000
 ```
+- API Docs: `http://localhost:8000/docs`
+- Health check: `http://localhost:8000/api/health`
+
+### 2. Frontend Application
+```bash
+cd apps/web
+npm install
+npm run dev
+```
+- Web Application: `http://localhost:5173`
+- CRM Portal: `http://localhost:5173/app/dashboard`
+
+### 3. Run E2E & Backend Tests
+```bash
+# Run backend pytest suite
+pytest tests/ -v
+
+# Run Playwright E2E browser tests
+cd apps/web
+npx playwright test
+```
+
+---
+
+## License
+MIT License
