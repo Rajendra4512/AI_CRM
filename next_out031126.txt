@@ -1,0 +1,117 @@
+================================================================================
+SalesFortis - Sprint Execution Log
+Plan: next_dev031126.md
+Execution Output: next_out031126.txt
+Execution Date: 2026-11-03
+Platform: AI-Native Multi-Vertical CRM SaaS
+================================================================================
+
+[STATUS: COMPLETED] Full Execution across All 3 Sprint Tracks:
+1. Track 1: Alembic Migrations & Live Database Persistence
+2. Track 2: AI Document Ingestion & Vector RAG Engine
+3. Track 3: Deepened Domain Workflow Engines (Construction, Clinical, Maritime)
+4. Comprehensive Verification: Pytest Suite & Playwright E2E Tests
+
+--------------------------------------------------------------------------------
+1. TRACK 1: ALEMBIC MIGRATIONS & LIVE DB PERSISTENCE
+--------------------------------------------------------------------------------
+- Alembic Migration Infrastructure:
+  * Created alembic.ini and configured alembic/env.py.
+  * Discovered all 23 database models across Auth, Admin, CRM, Verticals, and AI.
+  * Generated migration 5d323b46124c_initial_schema.py.
+  * Successfully applied migration: 23 tables created in salesfortis_dev.db.
+  * Tables: accounts, alembic_version, audit_logs, combo_packs, contacts, 
+            document_chunks, documents, enquiries, estimates, leads, 
+            marketing_plans, opportunities, projects, quotations, referrals, 
+            rfqs, roles, shipments, sites, studies, system_config, tenants, users.
+
+- Core Services & Tenant Isolation:
+  * core/services/auth_service.py: Direct bcrypt password hashing and JWT token issuance.
+  * core/services/crm_service.py: Real CRUD persistence for Accounts, Leads, and Opportunities.
+  * apps/api/routers/crm.py: Converted all endpoints to live DB queries with tenant_id filtering.
+  * apps/api/routers/auth.py: Live login, registration, and tenant session resolution.
+
+- Verification:
+  * tests/test_crm_crud.py: 4/4 passing (Tenant creation, User register/login, Account CRUD, Lead CRUD, Opportunity lifecycle).
+
+--------------------------------------------------------------------------------
+2. TRACK 2: AI DOCUMENT INGESTION & VECTOR RAG ENGINE
+--------------------------------------------------------------------------------
+- Vector Indexing & RAG Retrieval:
+  * ai/rag_service.py: Recursive text chunking, tenant-isolated vector indexing, and citation generation.
+  * workers/ingestion.py: Added PDF (pypdf), Word (python-docx), and plain text extraction.
+  * ai/router.py: Added POST /upload (multipart file upload), POST /index-text, and POST /query with source citations.
+
+- Verification:
+  * tests/test_ai_rag.py: 4/4 passing (Text chunking, semantic index & query, document listing, multipart file upload).
+
+--------------------------------------------------------------------------------
+3. TRACK 3: DEEPENED DOMAIN WORKFLOW ENGINES
+--------------------------------------------------------------------------------
+- Construction & Trades Suite:
+  * modules/construction/service.py: Schedule of Values (SOV) calculation engine (scheduled value, previous/current work, stored materials, 10% retainage, net payment due, balance to finish).
+  * modules/construction/router.py: POST /sov/calculate and POST /change-events.
+  * apps/web/src/pages/app/VerticalHub.tsx: Live interactive SOV billing calculator.
+
+- Clinical Trials & CTMS Suite:
+  * modules/clinical/service.py: Subject recruitment funnel and electronic consent (eICF / 21 CFR Part 50) compliance guardrails.
+  * modules/clinical/router.py: GET /funnel/{study_id} and POST /consent/verify.
+  * apps/web/src/pages/app/VerticalHub.tsx: Interactive subject randomization and consent verification controls.
+
+- Maritime Logistics & Freight Brokerage:
+  * modules/maritime/service.py: Dynamic multi-factor freight rating engine (Base Ocean Freight + BAF + THC + PSS) and shipment milestone tracker.
+  * modules/maritime/router.py: POST /rates/quote and GET /shipments/{bl_number}/timeline.
+  * apps/web/src/pages/app/VerticalHub.tsx: Live interactive Ocean Freight Rate quote generator.
+
+- Verification:
+  * tests/test_vertical_workflows.py: 6/6 passing.
+
+--------------------------------------------------------------------------------
+4. AUTOMATED TEST & PLAYWRIGHT E2E SUMMARY
+--------------------------------------------------------------------------------
+- Pytest Backend Test Results (27/27 PASSED in 1.92s):
+  * tests/test_ai_rag.py (4 passed)
+  * tests/test_api_endpoints.py (10 passed)
+  * tests/test_crm_crud.py (4 passed)
+  * tests/test_vertical_workflows.py (6 passed)
+  * tests/test_workers.py (3 passed)
+
+- Playwright Browser E2E Test Results (8/8 PASSED in 4.1s):
+  1. Public Landing Page displays branding and vertical cards (PASSED)
+  2. Navigation to Construction Vertical marketing page (PASSED)
+  3. Sign In portal allows one-click authentication into CRM Dashboard (PASSED)
+  4. Leads Pipeline allows adding a new deal to Kanban board (PASSED)
+  5. Vertical Hub allows switching between Construction, Clinical, and Maritime (PASSED)
+  6. Construction Tab calculates Live SOV billing and retainage (PASSED)
+  7. Clinical Tab enforces consent guardrail before randomizing (PASSED)
+  8. Maritime Tab generates live ocean freight quote with surcharges (PASSED)
+
+- Frontend Compilation:
+  * React 19 + TypeScript + Vite built cleanly in 787ms (0 errors, 0 warnings).
+
+--------------------------------------------------------------------------------
+5. FILES MODIFIED & CREATED
+--------------------------------------------------------------------------------
+- next_out031126.txt (Execution log)
+- alembic.ini (Alembic configuration)
+- alembic/env.py (Alembic environment metadata)
+- alembic/versions/5d323b46124c_initial_schema.py (Initial 23-table schema migration)
+- core/services/auth_service.py (Direct bcrypt hashing and JWT service)
+- core/services/crm_service.py (Database persistence for Accounts, Leads, Opportunities)
+- apps/api/routers/crm.py (Database CRUD endpoints with tenant isolation)
+- apps/api/routers/auth.py (Database login, registration, session resolution)
+- ai/rag_service.py (Tenant-isolated semantic text indexing & RAG retrieval)
+- workers/ingestion.py (Multiformat document parser & Celery worker tasks)
+- ai/router.py (Live /upload, /index-text, /query endpoints)
+- modules/construction/service.py (Schedule of Values retainage & billing engine)
+- modules/construction/router.py (SOV calculation & change events)
+- modules/clinical/service.py (CTMS funnel & consent compliance guardrail)
+- modules/clinical/router.py (Funnel & consent verification endpoints)
+- modules/maritime/service.py (Ocean freight rating engine & container milestones)
+- modules/maritime/router.py (Rate quoting & shipment timeline endpoints)
+- apps/web/src/pages/app/VerticalHub.tsx (Interactive SOV, consent, freight calculators)
+- apps/web/e2e/crm_flow.spec.ts (8 automated E2E browser tests)
+- tests/test_crm_crud.py (Live CRM & auth integration tests)
+- tests/test_ai_rag.py (RAG indexing, query, and file upload tests)
+- tests/test_vertical_workflows.py (Domain engine tests for all 3 verticals)
+================================================================================

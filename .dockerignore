@@ -1,0 +1,14 @@
+.git
+.pytest_cache
+__pycache__
+*.pyc
+*.db
+node_modules
+apps/web/node_modules
+apps/web/dist
+apps/web/playwright-report
+apps/web/test-results
+graphify
+graphify-out
+.playwright-cli
+

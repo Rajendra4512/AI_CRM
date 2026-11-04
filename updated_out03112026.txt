@@ -1,0 +1,164 @@
+================================================================================
+SALESFORTIS — PHASE 0 PLAN RECONCILIATION & PHASE 1 READINESS EXECUTION REPORT
+Timestamp: 2026-11-04 00:15:45
+Execution Control: PLAN RECONCILIATION ONLY (No application source code or DB schema modified)
+Output Destination: updated_out03112026.txt
+================================================================================
+
+1. EXECUTIVE SUMMARY & CONTEXT
+--------------------------------------------------------------------------------
+In accordance with 'update_masterplan.md', the existing implementation plan has
+been updated to reconcile the finalized SalesFortis product architecture,
+customer journey, triple authorization boundaries, and deployment topology.
+
+Existing findings from Phase 0 and the operational persistence achievements
+(33 database tables under Alembic revision b6e8f38db826, 15/15 passing pytest unit
+and integration tests, 8/8 passing Playwright E2E tests) have been preserved.
+
+No application code, Docker files, or database schemas were modified during this
+reconciliation turn.
+
+
+2. LIST OF DOCUMENTS UPDATED / CREATED
+--------------------------------------------------------------------------------
+Created:
+- docs/deployment/local-docker-topology-plan.md
+
+Reconciled & Updated:
+- docs/implementation/01-current-codebase-verification.md
+- docs/implementation/02-shared-platform-dependency-matrix.md
+- docs/implementation/03-three-industry-implementation-plan.md
+- docs/implementation/08-database-and-migration-plan.md
+- docs/implementation/09-security-and-tenant-isolation-plan.md
+- docs/implementation/10-focused-test-strategy.md
+- docs/implementation/11-commercial-readiness-checklist.md
+- docs/implementation/12-implementation-progress-tracker.md
+
+
+3. TARGETED GAP ASSESSMENT (NEWLY FINALIZED REQUIREMENTS)
+--------------------------------------------------------------------------------
+1. SalesFortis Branding: IMPLEMENTED
+   - Marketing website, navbar, login, and dashboard headers display SalesFortis.
+2. Industry-Specific Marketing: IMPLEMENTED
+   - Dedicated pages for Construction, Clinical, and Maritime with unique feature sets.
+3. Industry-Specific Pricing: PARTIAL
+   - Copy exists on marketing pages; requires structured registration linking.
+4. Trial Registration: PARTIAL
+   - User/tenant registration works; needs to capture and persist the selected industry.
+5. Tenant Provisioning: IMPLEMENTED
+   - Transactional creation of Tenant with unique slug and user credentials.
+6. Industry Entitlement Persistence: PARTIAL
+   - Tenant model currently has subscription_tier; needs explicit 'industry' column.
+7. Industry-Specific Frontend Navigation: PARTIAL
+   - VerticalHub currently renders all tabs; needs filtering by tenant entitlement.
+8. Backend Industry Authorization: MISSING
+   - Endpoints enforce tenant_id, but do not yet block cross-industry API calls.
+9. Cross-Tenant Data Isolation: IMPLEMENTED & TESTED
+   - 100% of queries use .filter(Model.tenant_id == tenant.id).
+10. Cross-Tenant Document & AI Isolation: IMPLEMENTED & TESTED
+   - RAG chunks and queries isolated by tenant_id.
+11. Superadmin Separation: PARTIAL
+   - User.is_superadmin flag exists; needs isolated superadmin endpoint routes.
+12. Docker Port Routing: PARTIAL
+   - Backend API (8000), Postgres (5432), Redis (6379) active; needs dual web ports (5000 & 5001).
+13. Production Frontend Build: IMPLEMENTED & TESTED
+   - Vite production build succeeds in 825ms with 0 errors.
+14. PostgreSQL Persistence: IMPLEMENTED & TESTED
+   - 33 tables migrated cleanly under Alembic control.
+15. Authentication Redirects: PARTIAL
+   - Handled on single host; needs cross-host redirect from 5000 to 5001.
+
+
+4. NEWLY IDENTIFIED REQUIREMENTS FOR PHASE 1
+--------------------------------------------------------------------------------
+- SEC-ENT-01: Non-destructive addition of 'industry' column to 'tenants' table (default: 'all').
+- SEC-ENT-02: Server-side 'require_industry_entitlement(required_industry)' dependency in FastAPI.
+- SEC-ENT-03: Registration flow passing selected industry from marketing to tenant provisioning.
+- SEC-ENT-04: JWT access token carrying 'industry' claim.
+- SEC-ENT-05: Cross-industry access denial (HTTP 403 Forbidden).
+- UI-NAV-01: Frontend navigation dynamically scoped to tenant's entitled industry.
+- DEP-PORT-01: Local Docker port separation: Marketing (5000) and App (5001).
+
+
+5. REUSABLE EXISTING FUNCTIONALITY
+--------------------------------------------------------------------------------
+- core/services/auth_service.py: get_current_user, get_current_tenant, bcrypt hashing, JWT issuance.
+- core/models/auth.py: Tenant, User, Role schema definitions.
+- modules/construction/service.py: Full SOV calculation math and database persistence.
+- modules/clinical/service.py: Real-time recruitment funnel and eICF 21 CFR Part 50 consent check.
+- modules/maritime/service.py: Dynamic rate cards, surcharge calculations, LFD alerts, HBL.
+- ai/router.py: CSI specification extraction, protocol parsing, ocean tariff normalization.
+- apps/web/src/pages/Welcome.tsx & apps/web/src/pages/*Marketing.tsx: Industry marketing views.
+- apps/web/src/pages/app/VerticalHub.tsx: Live UI views for all three industry solutions.
+
+
+6. PROPOSED PHASE 1 IMPLEMENTATION SEQUENCE
+--------------------------------------------------------------------------------
+Step 1: Security & Shared Foundation (Shared First)
+  - Create non-destructive Alembic migration adding 'industry' (String, default 'all') to 'tenants'.
+  - Update core/models/auth.py to declare 'industry = Column(String, default="all")'.
+  - Add 'require_industry_entitlement' helper to core/services/auth_service.py.
+  - Update apps/api/routers/auth.py to accept 'industry' on /register and embed in JWT.
+
+Step 2: API Industry Isolation Guarding
+  - Add Depends(require_industry_entitlement("construction")) to modules/construction/router.py.
+  - Add Depends(require_industry_entitlement("clinical")) to modules/clinical/router.py.
+  - Add Depends(require_industry_entitlement("maritime")) to modules/maritime/router.py.
+
+Step 3: Industry-Aware Frontend Customer Journey
+  - Update marketing trial buttons on localhost:5000 to link to registration with ?industry=...
+  - Update Login/Registration UI to pass the chosen industry.
+  - Update VerticalHub.tsx to display only the tenant's entitled vertical tab.
+
+Step 4: Verification & Focused Tests
+  - Create tests/test_industry_isolation.py verifying HTTP 403 when a tenant attempts to
+    access another vertical's endpoints.
+  - Run focused pytest and Playwright test suites.
+
+
+7. EXACT SOURCE FILES PROPOSED FOR MODIFICATION IN PHASE 1
+--------------------------------------------------------------------------------
+Backend:
+- core/models/auth.py (declare industry column on Tenant)
+- core/services/auth_service.py (add require_industry_entitlement and update token creation)
+- apps/api/routers/auth.py (update RegisterRequest and registration handler)
+- modules/construction/router.py (apply industry entitlement guard)
+- modules/clinical/router.py (apply industry entitlement guard)
+- modules/maritime/router.py (apply industry entitlement guard)
+- alembic/versions/<new_migration>_tenant_industry_column.py (Alembic migration)
+
+Frontend:
+- apps/web/src/pages/app/VerticalHub.tsx (filter tabs by user/tenant industry)
+- apps/web/src/pages/app/AppLayout.tsx (role/entitlement-based nav labels)
+- apps/web/src/pages/app/Login.tsx (handle industry param on trial registration)
+
+Testing:
+- tests/test_industry_isolation.py (new focused test suite)
+
+
+8. SECURITY RISKS & MITIGATIONS
+--------------------------------------------------------------------------------
+- Risk: Insecure direct object reference (IDOR) across tenants.
+  Mitigation: Server-side derivation of tenant_id from validated JWT; mandatory .filter(tenant_id).
+- Risk: Cross-industry privilege escalation.
+  Mitigation: Backend require_industry_entitlement dependency rejects unauthorized calls with HTTP 403.
+- Risk: Browser tampering of industry parameter during registration.
+  Mitigation: Whitelist validation of industry string ('construction', 'clinical', 'maritime', 'all').
+
+
+9. DOCKER DEPLOYMENT DEPENDENCIES
+--------------------------------------------------------------------------------
+- Dual web host exposure required:
+  - localhost:5000 for public marketing and industry discovery.
+  - app.localhost:5001 for authenticated CRM workspace.
+- Backend API remains on port 8000 with CORS configured to accept both origins.
+
+
+10. APPROVAL GATE
+--------------------------------------------------------------------------------
+Plan reconciliation is complete. In strict adherence to Section 10 of
+'update_masterplan.md', no application code or schemas were altered.
+
+Awaiting explicit user approval before beginning Phase 1 source-code modifications.
+================================================================================
+

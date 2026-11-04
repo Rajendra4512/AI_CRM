@@ -1,0 +1,258 @@
+================================================================================
+SALESFORTIS — REA COMPETITIVE UX BENCHMARKING & ENTERPRISE SAAS MODERNIZATION
+EXECUTION LOG & VERIFICATION REPORT (REA_out041126.txt)
+Generated: 2026-11-04T07:25:00+05:30
+Prompt Specification: SALESFORTIS_REA_improve.md
+================================================================================
+
+1. EXECUTIVE SUMMARY
+--------------------------------------------------------------------------------
+SalesFortis was upgraded from a baseline multi-vertical prototype into an
+enterprise-grade, domain-native B2B SaaS platform across both its public
+marketing portal (http://localhost:5000) and its authenticated multi-tenant CRM
+& operational workbench suite (http://localhost:5001), backed by FastAPI
+(http://localhost:8001), PostgreSQL (:5432, 32 tables), and Redis (:6379).
+
+Execution strictly followed the Autonomous Execution Cycle:
+  Inspect (REA + Archify/Graphify) -> Synthesize UX Benchmarks -> Implement
+  Shared Design System & Reference Vertical (Construction) -> Reuse Validated
+  Primitives Across Clinical & Maritime -> Rebuild Live Docker Web Container ->
+  Verify via Playwright E2E, REA Runtime/Static Audits & Pytest -> Update
+  Archify, Graphify & Execution Logs.
+
+All legal, ethical, and operational safety guardrails were enforced:
+  - Publicly accessible pages only; zero login, paywall, cookie-wall, or WAF
+    bypasses attempted.
+  - Zero copied competitor source code, logos, trademarks, or verbatim copy.
+  - One shared multi-tenant CRM platform with three strictly isolated industry
+    workspaces (zero cross-vertical tab or record leakage).
+  - External Docker containers (portfolio-compass-frontend-1,
+    portfolio-compass-backend-1) were NEVER touched, started, stopped, or
+    modified.
+  - Zero database schema destructive changes and zero unauthorized git commits.
+
+================================================================================
+2. REA (REVERSE ENGINEER ANYTHING) READINESS & DIAGNOSTICS
+================================================================================
+- Installed Skill Verified:
+  C:\Users\raj45\.agents\skills\reverse-engineer-anything\SKILL.md
+  References consulted:
+    * references/connection-and-recovery.md
+    * references/runtime-observation.md
+    * references/evidence-workflows.md
+- REA Runtime & Version:
+  rea-agents@6.7.0 | expected_skill_version: 42 | 207 MCP tools | 153 CLI cmds
+  tools_sha256: af39310c9591bb981893ec0d2188b1bcf6e9cc8ba3ac513d5bbefc8ddcb85639
+- Host & Client Check (`rea doctor --client antigravity --json`):
+  * Host OS / Node: win32 x64, Node.js v24.21.0 (healthy)
+  * VS Code MCP config: aligned (rea-agents@6.7.0)
+  * Antigravity global config (`~/.gemini/config/mcp_config.json`): missing (0B)
+  * Recovery action per `connection-and-recovery.md`: Ran read-only dry-run
+    (`rea setup --client antigravity --dry-run --json`) without mutating global
+    user config without approval, and executed REA's canonical CLI Evidence
+    engine (`rea.mjs capture-browser-scenario` & `analyze-javascript-application`)
+    with headless Chrome 157.0.8103.38 to generate cryptographically hashed
+    `Evidence` envelopes.
+
+================================================================================
+3. CRYPTOGRAPHIC REA COMPETITIVE EVIDENCE LEDGER (12 PUBLIC BENCHMARK CAPTURES)
+================================================================================
+Structured synthesis saved under `docs/competitive-ux-research/`:
+  - 00-REA-METHODOLOGY-AND-EVIDENCE-LEDGER.md
+  - 01-CONSTRUCTION-BENCHMARK-PROCORE-CONTRACTOR-FOREMAN.md
+  - 02-CLINICAL-BENCHMARK-TRIALX-REALTIME-ECLINICAL.md
+  - 03-MARITIME-BENCHMARK-LOGITUDE-MAGAYA.md
+
+[A] CONSTRUCTION & SUBCONTRACTOR BENCHMARKS
+1. Procore (https://www.procore.com/en-sg)
+   - Desktop 1440x900: ev_18509c052e496448a7a2983e201200c7268bfe178a864fe5da365dd6b89e40d6
+     DOM: 630,658 bytes | A11y: 13,081 bytes | Net: 491 events | HTTP 200
+   - Mobile  390x844:  ev_9c893c690c449c324d3f47586f279d5b5aa31b714c255f81419c0bdfac05163b
+     DOM: 629,876 bytes | A11y: 11,347 bytes | Net: 476 events | HTTP 200
+   - Observed UX Patterns: Lifecycle-segmented mega-navigation (Preconstruction,
+     Project Execution, Financial Management), stakeholder-role framing (Owners,
+     General Contractors, Specialty Contractors), high-contrast industrial dark
+     hero paired with clean tabular financial proof points.
+
+2. Contractor Foreman (https://contractorforeman.com/plans/)
+   - Desktop 1440x900: ev_030301e4e4fed1b0f862f08fa32b7422a59f5dfadaa450e52caa00c8dce86f40
+     DOM: 1,494,978 bytes | A11y: 54,188 bytes | Net: 798 events | HTTP 200
+   - Mobile  390x844:  ev_cec46ab87d1d56c64360847b79bff86ef8bb12178f6c6600c5d184dafc6bb465
+     DOM: 1,507,868 bytes | A11y: 35,904 bytes | Net: 735 events | HTTP 200
+   - Observed UX Patterns: Dense module transparency (3 structured HTML
+     capability matrices across Financial, Document/Field Logs, Crew T&M, AIA
+     G702/G703 billing, Change Orders, and Subcontracts).
+
+[B] CLINICAL TRIALS & CTMS BENCHMARKS
+3. TrialX (https://www.trialx.com/)
+   - Desktop 1440x900: ev_92d0775b7532700a718c207603e8a6608288966323fc5ff8f3659d71c452d20c
+     DOM: 117 bytes | A11y: 49 bytes | Net: 3 events | HTTP 403 Forbidden (WAF)
+   - Mobile  390x844:  ev_859878a54848e48c2e727faf491a9e7eb16d7d657de1fd7090bc7d99b4467af5
+     DOM: 117 bytes | A11y: 49 bytes | Net: 3 events | HTTP 403 Forbidden (WAF)
+   - Access Limitation Recorded Truthfully: Automated headless browser blocked
+     by upstream WAF (HTTP 403). Zero evasion or header spoofing attempted per
+     Requirement #5.
+
+4. RealTime-eClinical (https://realtime-eclinical.com/)
+   - Desktop 1440x900: ev_c0627f262c2d5f57ac69e690518eea2a878a9fcfe386672633e672745c75cc46
+     DOM: 1,051,128 bytes | A11y: 18,098 bytes | Net: 189 events | HTTP 200
+   - Mobile  390x844:  ev_41224e2f1fdc3eecd5471ea5a1a480e513fc067d95e4bf439c6b162abebb5281
+     DOM: 1,051,194 bytes | A11y: 17,374 bytes | Net: 192 events | HTTP 200
+   - Observed UX Patterns: Accessible 8-tab ARIA `role="tab"` product suite
+     architecture (CTMS, eSource, eDOCS/eISF, eConsent, Text/Messaging, SitePay,
+     Participant Portal), clinical-emerald & slate compliance palette, explicit
+     21 CFR Part 11 / HIPAA trust hierarchy.
+
+[C] MARITIME & FREIGHT FORWARDING BENCHMARKS
+5. Logitude World (https://www.logitudeworld.com/freight-forwarding-crm/)
+   - Desktop 1440x900: ev_bd435445206d6e619ecd37959268a54d1447cf80185dea2f2472d495c7d93e81
+     DOM: 174,663 bytes | A11y: 11,266 bytes | Net: 141 events | HTTP 200
+   - Mobile  390x844:  ev_4543fcfff093a812981ba609a482edba6ed7e6ba907c2b8a5ef766d1b6706b1c
+     DOM: 174,705 bytes | A11y: 7,282 bytes | Net: 141 events | HTTP 200
+   - Observed UX Patterns: 23 modular workflow sections linking Freight CRM
+     opportunities directly to multi-modal spot quotes, tariff management, and
+     shipper/consignee milestone visibility.
+
+6. Magaya (https://www.magaya.com/)
+   - Desktop 1440x900: ev_248bede5eaafc95890f22f76251ed6aa87949cba4dc4dd00528cd8f2b35507e8
+     DOM: 384,989 bytes | A11y: 14,618 bytes | Net: 469 events | HTTP 200
+   - Mobile  390x844:  ev_8c008823d88635fbbcd2fe689b433d368052e88ac1704fe0dd2e26cc4b37124d
+     DOM: 380,469 bytes | A11y: 13,247 bytes | Net: 461 events | HTTP 200
+   - Observed UX Patterns: Digital Freight Portal + Supply Chain + Rate
+     Management + Customs/HBL documentation positioning, pairing commercial
+     quoting speed with demurrage/detention exception governance.
+
+================================================================================
+4. ARCHITECTURAL & IMPLEMENTATION CHANGES DELIVERED
+================================================================================
+Consulted `archify/` and `graphify/` prior to editing to preserve every FastAPI
+route contract, JWT revocation guard, tenant scoping rule, and Playwright E2E
+selector.
+
+[4.1] Original Enterprise Design System & Shared Primitives
+  - `apps/web/src/components/Icons.tsx`:
+    22 crisp vector SVG domain & action icons (`BrandMark`, `HardHatIcon`,
+    `DnaIcon`, `ShipIcon`, `CalculatorIcon`, `ShieldCheckIcon`, `ContainerIcon`,
+    `SparklesIcon`, etc.), eliminating amateur emoji clutter.
+  - `apps/web/src/components/EnterpriseWorkbench.tsx`:
+    * `KpiTelemetryStrip`: Tabular-numeral (`font-variant-numeric: tabular-nums`)
+      metric cards with progress bars and operational subtext.
+    * `SubModuleNav`: Accessible `role="tablist"` / `role="tab"` (`aria-selected`)
+      sub-module navigation with live record count badges.
+    * `LifecycleStepper`: 4-stage domain execution progress bar.
+    * `EnterpriseFilterableTable<T>`: Searchable, status-pill filterable
+      enterprise data table with custom action slots and empty states.
+  - `apps/web/src/index.css` & `apps/web/src/pages/app/AppPortal.css`:
+    Enterprise typography (`Inter` + `JetBrains Mono`), status badge tokens,
+    responsive mobile/tablet breakpoints, and clean panel elevation.
+
+[4.2] Executive Marketing Portal & Vertical Landing Experiences (:5000)
+  - `apps/web/src/pages/Welcome.tsx` & `Welcome.css`:
+    Sticky executive navbar, split hero with interactive 3-vertical live
+    workbench preview switcher (AIA G702/G703 Pay App, 21 CFR Part 50 CTMS,
+    Ocean Freight Control Tower), capability comparison cards, and direct
+    single-vertical trial provisioning flows.
+  - `apps/web/src/pages/Marketing.css`, `ConstructionMarketing.tsx`,
+    `ClinicalMarketing.tsx`, `MaritimeMarketing.tsx`:
+    Domain-tailored product previews, workflow breakdowns, compliance/governance
+    architecture callouts, and pre-scoped `/register?industry=<vertical>` &
+    `/login?industry=<vertical>` onboarding paths.
+
+[4.3] Enterprise CRM Shell, Auth Sandboxes & Core Views (:5001)
+  - `apps/web/src/pages/app/Login.tsx`:
+    Split-screen enterprise authentication & tenant workspace provisioning
+    portal featuring 1-click isolated PostgreSQL vertical sandboxes
+    (`construction.demo`, `clinical.demo`, `maritime.demo`).
+  - `apps/web/src/pages/app/AppLayout.tsx`:
+    Authoritative `/api/v1/auth/me` entitlement sync, industry-specific deep
+    sub-module sidebar links (`?vertical=...&sub=...`), and a live slide-over
+    **Tenant Document RAG Copilot** drawer wired to `/api/v1/ai/query` and
+    `/api/v1/ai/index-text`.
+  - `apps/web/src/pages/app/Dashboard.tsx`:
+    Live backend metric synchronization, domain workbench launchpad cards, and
+    strictly isolated operational queue & AI risk insights.
+  - `apps/web/src/pages/app/LeadsPipeline.tsx`:
+    Dual **Kanban Board + Tabular Register** view synced with
+    `/api/v1/crm/opportunities`, stage filter pills, and deal creation modal.
+
+[4.4] Reference End-to-End Construction Workbench + Clinical & Maritime Reuse
+  - `apps/web/src/pages/app/VerticalHub.tsx`:
+    Enforces strict tenant industry entitlement (`sf_industry` + `/auth/me`) so
+    single-vertical tenants NEVER see tabs or modules from other industries.
+  - `apps/web/src/pages/app/workbenches/ConstructionWorkbench.tsx` (Reference):
+    * Multi-line AIA G702/G703 Continuation Sheet calculator, `POST /sov/applications`
+      persistence, `GET /sov/applications` history ledger, `PATCH /approve`
+      certification lock, and `GET /export` CSV download preview.
+    * Procore-style RFQ & Change Event register (`GET/POST /change-events`) with
+      1-click state progression (`draft -> rfq_issued -> pco_submitted -> pco_approved`).
+    * Field Crew Time & Materials (`POST /field-tm`) slip logger.
+    * CSI MasterFormat Specification & Addendum Scope Delta AI
+      (`POST /api/v1/ai/analyze-spec`).
+  - `apps/web/src/pages/app/workbenches/ClinicalWorkbench.tsx`:
+    * 21 CFR Part 50 eICF verification & cohort randomization guardrail
+      (`POST /verify-consent`) + audited consent withdrawal (`POST /revoke-consent`).
+    * HIPAA Safe Harbor pseudonymous referral intake (`GET/POST /referrals`)
+      surfacing live HTTP 422 `PHI_SAFEGUARD` blocks when PII is submitted.
+    * Clinical Research Coordinator visit & follow-up scheduler (`GET/POST /follow-ups`).
+    * Protocol Inclusion/Exclusion AI parser (`POST /api/v1/ai/analyze-protocol`)
+      with mandatory CRC human sign-off (`PATCH /criteria/{id}/verify`).
+  - `apps/web/src/pages/app/workbenches/MaritimeWorkbench.tsx`:
+    * Multi-surcharge Ocean Freight Quoter (`POST /quote`) with Trade Lane,
+      Equipment (`40HC`/`20GP`/`45HC`/`REEFER`), BAF, THC, and PSS breakdown.
+    * Vessel Booking & Container Milestone LFD Demurrage tracker
+      (`GET/POST /shipments/{bl}/milestones`) + DCSA v2.2 tracking feed (`GET /tracking/{bl}`).
+    * Carrier Tariff CSV/text AI normalizer (`POST /api/v1/ai/extract-rate-sheet`,
+      `POST /api/v1/ai/upload-tariff`) and Pricing Manager approval gate
+      (`GET /rate-cards`, `POST /rate-cards/{id}/approve`).
+    * NVOCC House Bill of Lading issuance desk (`POST /hbl`).
+
+================================================================================
+5. BUILD, LIVE DOCKER DEPLOYMENT & AUTOMATED VERIFICATION EVIDENCE
+================================================================================
+1. Frontend TypeScript & Vite Production Build (`apps/web`):
+   - Command: `npm.cmd run build` (`tsc && vite build`)
+   - Result:  PASSED (0 TypeScript errors, 56 modules transformed in 1.41s)
+
+2. Safe Live Docker Container Update (`salesfortis` project):
+   - Command: `docker compose -p salesfortis -f infra/docker-compose.dev.yml up -d --build --no-deps web`
+   - Container Status Verified (`docker ps -a`):
+     * `salesfortis-web`:      Up & healthy (`0.0.0.0:5000->80`, `0.0.0.0:5001->80`) -> HTTP 200
+     * `salesfortis-api`:      Up & healthy (`0.0.0.0:8001->8001`) -> HTTP 200
+     * `salesfortis-worker`:   Up
+     * `salesfortis-postgres`: Up & healthy (`127.0.0.1:5432->5432`)
+     * `salesfortis-redis`:    Up & healthy (`127.0.0.1:6379->6379`)
+     * `portfolio-compass-frontend-1` & `portfolio-compass-backend-1`: UNTOUCHED
+
+3. REA Static & Live Runtime Verification on Modernized SalesFortis Stack:
+   - Static JS/TS Semantic Graph Audit (`apps/web/src`, 18 files):
+     `evidence_id`: ev_fe2e126dda436627b115f9ea6cbe6cd23e87aeb4e0eff6857c5612e39b3010fd
+   - Live Docker Marketing (`http://localhost:5000/`):
+     `evidence_id`: ev_0976d9b9821fd672c9c3550d079f8065020ac70038773a5aa625b5b1e5bbc227
+     (`exit_code: 0`, `page_errors: 0`)
+   - Live Docker CRM App (`http://localhost:5001/login`):
+     `evidence_id`: ev_5cc4b1178f2bfafeb0c8e31a46dda048c158c199f85f7ccc2b27f340858bd110
+     (`exit_code: 0`, `page_errors: 0`)
+
+4. End-to-End Playwright Browser Suite (`apps/web/e2e/crm_flow.spec.ts`):
+   - Command: `npx.cmd playwright test`
+   - Result:  16 / 16 PASSED (14.2s)
+     * Public executive portal & vertical navigation (2 tests)
+     * Authentication, Kanban deal creation & vertical switcher (3 tests)
+     * Live SOV calculator, 21 CFR 50 consent guardrail & Maritime lane quoter (3 tests)
+     * Full Marketing -> Registration -> Tenant Provisioning -> Login -> Strict
+       Single-Vertical Isolation -> Logout across Construction, Clinical & Maritime (4 tests)
+     * Deep Reference Construction Workbench (G703 + CSI Spec AI) (1 test)
+     * Deep Clinical CTMS Workbench (HIPAA Safe Harbor 422 Block + Protocol CRC AI) (1 test)
+     * Deep Maritime Freight Tower (Tariff AI Staging + HBL Issuance) (1 test)
+     * Mobile Responsive Viewport `390x844` layout verification (1 test)
+
+5. Backend Pytest Suite (`tests/`):
+   - Command: `python -m pytest tests/ -q`
+   - Result:  50 / 50 PASSED (44.82s)
+
+6. Archify & Graphify Knowledge Sync:
+   - Updated `archify/02-frontend-backend-runtime.md` component & runtime diagram.
+   - Rebuilt `graphify/` (`graphify update .`): `1,640` nodes, `3,103` edges,
+     `148` communities (`90% EXTRACTED`, `0% AMBIGUOUS`).
+================================================================================
+

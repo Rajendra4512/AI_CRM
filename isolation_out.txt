@@ -1,0 +1,142 @@
+================================================================================
+SALESFORTIS — STRONG ISOLATION & MICROSERVICES-READY AMENDMENT EXECUTION REPORT
+Timestamp: 2026-11-04 00:21:15
+Execution Control: ARCHITECTURAL AMENDMENT & RECONCILIATION ONLY
+                  (Zero application code, Docker config, or DB schema modified)
+Output Destination: isolation_out.txt
+================================================================================
+
+1. EXECUTIVE SUMMARY
+--------------------------------------------------------------------------------
+In accordance with 'Strong_Isolation.md', the SalesFortis composite engineering
+plan has been updated to establish:
+1. Strong multi-tenant isolation across all data, documents, AI retrieval, and tasks.
+2. Strict industry-vertical authorization (triple boundary enforcement).
+3. Defense-in-depth security (including PostgreSQL Row-Level Security evaluation).
+4. Decoupled module ownership for all three industry suites and shared services.
+5. Microservices extraction readiness without migrating to microservices today.
+6. Continued single-container modular monolith local Docker deployment.
+
+Existing findings and code baseline achievements (33 database tables under Alembic
+revision b6e8f38db826, 15/15 passing pytest unit/integration tests, 8/8 passing
+Playwright E2E tests) have been strictly preserved.
+
+
+2. DOCUMENTS UPDATED / RECONCILED
+--------------------------------------------------------------------------------
+- docs/implementation/02-shared-platform-dependency-matrix.md
+  * Added Section 1: Modular monolith architecture & domain module boundaries.
+  * Added Section 2: Microservices extraction readiness table (data ownership,
+    dependencies, extraction order, and communication contracts).
+  * Added Section 3: Strict inter-module communication invariants (zero cross-module
+    direct database writes, explicit transaction boundaries).
+- docs/implementation/03-three-industry-implementation-plan.md
+  * Updated with microservices extraction boundaries for Construction, Clinical,
+    and Maritime suites.
+  * Added coordinated Phase 1 security-first implementation sequence.
+- docs/implementation/08-database-and-migration-plan.md
+  * Added Section 2: Comprehensive evaluation of PostgreSQL Row-Level Security (RLS)
+    including application role design, transaction-scoped tenant context (SET LOCAL),
+    and safe connection pooling handling.
+  * Added Section 3: Database ownership & foreign key invariants.
+  * Reconciled planned non-destructive migration for 'tenants.industry'.
+- docs/implementation/09-security-and-tenant-isolation-plan.md
+  * Added Section 2: Triple authorization enforcement (Tenant, Industry Entitlement,
+    and User RBAC / Superadmin separation).
+  * Added Section 3: Files, AI, and document security (untrusted input defenses,
+    tenant-isolated Qdrant vector retrieval, clinical PHI & 21 CFR Part 50 controls).
+- docs/implementation/10-focused-test-strategy.md
+  * Added Section 2: Comprehensive Security Test Matrix (12 negative test scenarios
+    covering cross-tenant reads/writes/deletes, forged headers, cross-industry denial,
+    unauthorized role escalation, and tamper locks).
+- docs/implementation/12-implementation-progress-tracker.md
+  * Updated tracking table with SEC-ENT-01, SEC-ENT-02, SEC-NEG-01, and MOD-BND-01.
+
+
+3. MICROSERVICES EXTRACTION READINESS ANALYSIS
+--------------------------------------------------------------------------------
+The modular monolith establishes decoupled boundaries across 6 discrete modules:
+1. Module 1: Identity, Tenancy & Platform Administration (Core Foundation)
+   - Owns: tenants, users, roles, system_config.
+   - Future: Central OAuth2/OIDC Auth Provider.
+2. Module 2: Construction Subcontractor Module
+   - Owns: projects, rfqs, estimates, sov_applications, sov_line_items,
+     change_events, field_time_materials.
+   - API: /api/v1/verticals/construction/*
+   - Future: Standalone REST/OpenAPI microservice (2nd in extraction order).
+3. Module 3: Clinical Trials CTMS Module
+   - Owns: studies, sites, referrals, consent_evidences, eligibility_criteria,
+     clinical_followup_tasks.
+   - API: /api/v1/verticals/clinical/*
+   - Future: High-compliance isolated microservice (4th in extraction order).
+4. Module 4: Maritime Logistics Module
+   - Owns: enquiries, quotations, shipments, rate_cards, milestone_events,
+     house_bills_of_lading.
+   - API: /api/v1/verticals/maritime/*
+   - Future: Independent rate calculator & tracking webhook service (3rd in order).
+5. Module 5: Shared AI & RAG Engine
+   - Owns: documents, document_chunks, vector collections.
+   - Contract: RAGService.index_document(), RAGService.query()
+   - Future: Standalone async gRPC worker service (1st in extraction order).
+6. Module 6: Core CRM Persistence
+   - Owns: accounts, contacts, leads, opportunities, audit_logs.
+   - Future: Core enterprise customer data graph.
+
+Invariants enforced:
+- Zero cross-module direct database writes.
+- Cross-module interaction occurs strictly through public Python service contracts.
+- No network calls between modules currently running in the same process.
+
+
+4. POSTGRESQL ROW-LEVEL SECURITY (RLS) EVALUATION
+--------------------------------------------------------------------------------
+- Recommendation: RLS is a valid defense-in-depth secondary enforcement layer
+  for PostgreSQL, complementing the application-level tenancy dependencies.
+- Application Design:
+  * Transaction-scoped tenant setting via 'SET LOCAL app.current_tenant = ...'.
+  * Connection pool user (salesfortis) must not be a database superuser.
+  * Separate migration role used for Alembic migrations.
+- Phased Rollout:
+  * Phase 1: Deploy strict application-level entitlement dependencies and
+    negative test coverage.
+  * Phase 2: Apply RLS policies to high-compliance tables (tenants, consent_evidences,
+    sov_applications).
+
+
+5. COMPREHENSIVE NEGATIVE SECURITY TEST MATRIX
+--------------------------------------------------------------------------------
+Planned for Phase 1 in 'tests/test_industry_isolation.py':
+- SEC-TEST-01: Cross-Tenant Read -> HTTP 404/403 Denial.
+- SEC-TEST-02: Cross-Tenant Write -> HTTP 404/403 Denial.
+- SEC-TEST-03: Cross-Tenant Delete -> HTTP 404/403 Denial.
+- SEC-TEST-04: Forged X-Tenant-ID Header -> Ignored; server token takes precedence.
+- SEC-TEST-05: Construction calling Clinical API -> HTTP 403 Forbidden.
+- SEC-TEST-06: Clinical calling Construction SOV API -> HTTP 403 Forbidden.
+- SEC-TEST-07: Maritime calling Construction Change Events -> HTTP 403 Forbidden.
+- SEC-TEST-08: Multi-industry entitled tenant ('all') -> HTTP 200 OK across all suites.
+- SEC-TEST-09: Cross-tenant AI retrieval -> 0 chunks returned.
+- SEC-TEST-10: Standard user role escalation to Superadmin -> HTTP 403 Forbidden.
+- SEC-TEST-11: Clinical consent guardrail bypass attempt -> HTTP 422 Unprocessable.
+- SEC-TEST-12: Approved SOV tampering attempt -> HTTP 400 Bad Request (Locked).
+
+
+6. PHASE 1 IMPLEMENTATION PRIORITIES (AFTER APPROVAL)
+--------------------------------------------------------------------------------
+1. Trusted tenant and authorization context (core/services/auth_service.py).
+2. Non-destructive 'tenants.industry' Alembic migration.
+3. Cross-tenant and cross-industry security verification (tests/test_industry_isolation.py).
+4. Industry module router guards (modules/*/router.py).
+5. Tenant-aware document and AI isolation (ai/router.py).
+6. Secure tenant provisioning and billing entitlements (apps/api/routers/auth.py).
+7. Industry-scoped frontend navigation on app.localhost:5001.
+8. Local Docker multi-host routing verification (5000 & 5001).
+
+
+7. APPROVAL GATE
+--------------------------------------------------------------------------------
+In accordance with Section 11 of 'Strong_Isolation.md':
+Architectural amendment is complete. No application code or schemas were altered.
+
+Awaiting explicit user approval before proceeding to Phase 1 source-code implementation.
+================================================================================
+

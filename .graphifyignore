@@ -1,0 +1,9 @@
+graphify/
+graphify-out/
+node_modules/
+apps/web/node_modules/
+apps/web/dist/
+.pytest_cache/
+playwright-report/
+test-results/
+.playwright-cli/

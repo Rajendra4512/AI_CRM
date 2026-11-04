@@ -1,0 +1,1118 @@
+{
+  "ai/llmops_router.py": {
+    "mtime": 1793673922.8809285,
+    "seen": 1793734671.5287435,
+    "ast_hash": "f3cc208d7b1366ca28309a9577c37232",
+    "semantic_hash": ""
+  },
+  "ai/models.py": {
+    "mtime": 1793647808.8530297,
+    "seen": 1793734671.5287435,
+    "ast_hash": "6e71ecf24e191ea6656bd1030052048e",
+    "semantic_hash": ""
+  },
+  "ai/rag_service.py": {
+    "mtime": 1793749245.8065567,
+    "seen": 1793757251.0279233,
+    "ast_hash": "f0490ea4b253e12fdeb8e8e6c00e1ad3",
+    "semantic_hash": ""
+  },
+  "ai/router.py": {
+    "mtime": 1793749245.930102,
+    "seen": 1793757251.0279233,
+    "ast_hash": "25004adf2f5571cac3c68e6064f0f250",
+    "semantic_hash": ""
+  },
+  "alembic/env.py": {
+    "mtime": 1793722688.3646743,
+    "seen": 1793734671.5287435,
+    "ast_hash": "b5c14c5666336953701ae5e3201f2ee3",
+    "semantic_hash": ""
+  },
+  "alembic/versions/5d323b46124c_initial_schema.py": {
+    "mtime": 1793722688.440581,
+    "seen": 1793734671.5287435,
+    "ast_hash": "a8b627e0dd0909c50408e4c71431f4d3",
+    "semantic_hash": ""
+  },
+  "alembic/versions/b6e8f38db826_expand_vertical_suites_persistence.py": {
+    "mtime": 1793730675.900716,
+    "seen": 1793734671.5287435,
+    "ast_hash": "3f843a5e74f55d84ed1016eeac6f9a7b",
+    "semantic_hash": ""
+  },
+  "alembic/versions/c7f1a8e2d39b_add_tenant_industry_column.py": {
+    "mtime": 1793733125.1052935,
+    "seen": 1793734671.5287435,
+    "ast_hash": "157b1198887537dbaaf04cab3e5349ea",
+    "semantic_hash": ""
+  },
+  "apps/api/main.py": {
+    "mtime": 1793749246.020656,
+    "seen": 1793757251.0279233,
+    "ast_hash": "9a3b701fdfea1162083ec0da46938bd5",
+    "semantic_hash": ""
+  },
+  "apps/api/routers/__init__.py": {
+    "mtime": 1793712909.7936802,
+    "seen": 1793734671.5287435,
+    "ast_hash": "e5684652a9098e73e962a13285369eb6",
+    "semantic_hash": ""
+  },
+  "apps/api/routers/admin.py": {
+    "mtime": 1793749246.2266886,
+    "seen": 1793757251.0279233,
+    "ast_hash": "562f603b449b116011ca8ab25f446704",
+    "semantic_hash": ""
+  },
+  "apps/api/routers/auth.py": {
+    "mtime": 1793753725.3976753,
+    "seen": 1793757251.0279233,
+    "ast_hash": "21ded63387dcaa175d3f2179d7ab3f47",
+    "semantic_hash": ""
+  },
+  "apps/api/routers/crm.py": {
+    "mtime": 1793749246.6682143,
+    "seen": 1793757251.0279233,
+    "ast_hash": "1a6a4ce43c2c8a248c9d5d80074787f4",
+    "semantic_hash": ""
+  },
+  "apps/web/e2e/crm_flow.spec.ts": {
+    "mtime": 1793756712.8282254,
+    "seen": 1793757251.0279233,
+    "ast_hash": "e43ab95c2a3bb6bcf3e737056821ac8e",
+    "semantic_hash": ""
+  },
+  "apps/web/package.json": {
+    "mtime": 1793711898.7381363,
+    "seen": 1793734671.5287435,
+    "ast_hash": "fae07f86e10f1d74d5e7d581e6cc5d27",
+    "semantic_hash": ""
+  },
+  "apps/web/playwright.config.ts": {
+    "mtime": 1793712909.9592767,
+    "seen": 1793734671.5287435,
+    "ast_hash": "f87cb009bf77bb528fb2ebe6ba52b93e",
+    "semantic_hash": ""
+  },
+  "apps/web/src/App.tsx": {
+    "mtime": 1793752135.6892884,
+    "seen": 1793757251.0279233,
+    "ast_hash": "607d18e814aa37c42b8cde696a754a16",
+    "semantic_hash": ""
+  },
+  "apps/web/src/main.tsx": {
+    "mtime": 1793642214.298064,
+    "seen": 1793734671.5287435,
+    "ast_hash": "78fffb4190e85688f3e63b8caaf799e5",
+    "semantic_hash": ""
+  },
+  "apps/web/src/pages/ClinicalMarketing.tsx": {
+    "mtime": 1793755351.755213,
+    "seen": 1793757251.0279233,
+    "ast_hash": "bfdaf00b3079a9504e4143ac2a00f873",
+    "semantic_hash": ""
+  },
+  "apps/web/src/pages/ConstructionMarketing.tsx": {
+    "mtime": 1793755351.8862154,
+    "seen": 1793757251.0279233,
+    "ast_hash": "6af7dfe9589eab374f2296526aecf0ad",
+    "semantic_hash": ""
+  },
+  "apps/web/src/pages/MaritimeMarketing.tsx": {
+    "mtime": 1793755352.0318522,
+    "seen": 1793757251.0279233,
+    "ast_hash": "12779131fea619fc8dd6c32753a3f667",
+    "semantic_hash": ""
+  },
+  "apps/web/src/pages/Welcome.tsx": {
+    "mtime": 1793755352.5780017,
+    "seen": 1793757251.0279233,
+    "ast_hash": "6952c7ff0d48f495365e10ce75e8d097",
+    "semantic_hash": ""
+  },
+  "apps/web/src/pages/app/AppLayout.tsx": {
+    "mtime": 1793755352.9381237,
+    "seen": 1793757251.0279233,
+    "ast_hash": "8600d78421dd76c2160fc99da4f6b0ff",
+    "semantic_hash": ""
+  },
+  "apps/web/src/pages/app/Dashboard.tsx": {
+    "mtime": 1793755353.4544594,
+    "seen": 1793757251.0279233,
+    "ast_hash": "a9d29369892a1c882c9bd7ade5c2dfbf",
+    "semantic_hash": ""
+  },
+  "apps/web/src/pages/app/LeadsPipeline.tsx": {
+    "mtime": 1793755353.6482952,
+    "seen": 1793757251.0279233,
+    "ast_hash": "17841fe674c8484c3dcb3401a20b2344",
+    "semantic_hash": ""
+  },
+  "apps/web/src/pages/app/Login.tsx": {
+    "mtime": 1793756610.638144,
+    "seen": 1793757251.0279233,
+    "ast_hash": "2ab4d52fe30b7190e3e073ab4625cfc5",
+    "semantic_hash": ""
+  },
+  "apps/web/src/pages/app/VerticalHub.tsx": {
+    "mtime": 1793756569.217652,
+    "seen": 1793757251.0279233,
+    "ast_hash": "3dec4c16c928849d7e5c5dd5fad641ec",
+    "semantic_hash": ""
+  },
+  "apps/web/src/vite-env.d.ts": {
+    "mtime": 1793642338.8489027,
+    "seen": 1793734671.5287435,
+    "ast_hash": "97b214023a92a133a4df15bdfa51ee47",
+    "semantic_hash": ""
+  },
+  "apps/web/tsconfig.json": {
+    "mtime": 1793642351.0125978,
+    "seen": 1793734671.5287435,
+    "ast_hash": "6b0318b9b75bbb74c7893a0e5ebfd76a",
+    "semantic_hash": ""
+  },
+  "apps/web/vite.config.ts": {
+    "mtime": 1793736779.4307387,
+    "seen": 1793738203.6573231,
+    "ast_hash": "548ff9464b00ded81535c6a7cfbb8421",
+    "semantic_hash": ""
+  },
+  "core/database.py": {
+    "mtime": 1793712910.4899626,
+    "seen": 1793734671.5287435,
+    "ast_hash": "c80359d5c377863280f00499d918068b",
+    "semantic_hash": ""
+  },
+  "core/models/admin.py": {
+    "mtime": 1793645298.188472,
+    "seen": 1793734671.5287435,
+    "ast_hash": "99ce4a095069480dbcada76832bdf7c1",
+    "semantic_hash": ""
+  },
+  "core/models/auth.py": {
+    "mtime": 1793732672.738352,
+    "seen": 1793734671.5287435,
+    "ast_hash": "3b525ef6240a23121d1b5c62ab712af6",
+    "semantic_hash": ""
+  },
+  "core/models/crm.py": {
+    "mtime": 1793645346.3083458,
+    "seen": 1793734671.5287435,
+    "ast_hash": "9a15c35a8ddc72af79f2b10a8675d8e2",
+    "semantic_hash": ""
+  },
+  "core/services/auth_service.py": {
+    "mtime": 1793749249.0446072,
+    "seen": 1793757251.0279233,
+    "ast_hash": "6878a15f974cf537eb897daccebcbe4a",
+    "semantic_hash": ""
+  },
+  "core/services/crm_service.py": {
+    "mtime": 1793738009.4386942,
+    "seen": 1793738203.6573231,
+    "ast_hash": "028fa49857d4e617c5bef2c43181b784",
+    "semantic_hash": ""
+  },
+  "docs/implementation/execution/EXECUTION_STATE.json": {
+    "mtime": 1793749249.9456165,
+    "seen": 1793757251.0279233,
+    "ast_hash": "48f0ec95e14ae97e9b9cb66092a08d52",
+    "semantic_hash": ""
+  },
+  "infra/docker-compose.dev.yml": {
+    "mtime": 1793752004.5378969,
+    "seen": 1793757251.0279233,
+    "ast_hash": "4c9d792e1796f23e0e2bfa02ca7dba4a",
+    "semantic_hash": ""
+  },
+  "infra/docker-compose.salesfortis.yml": {
+    "mtime": 1793641986.1317704,
+    "seen": 1793734671.5287435,
+    "ast_hash": "cede0762e03f534756c14c77370f267e",
+    "semantic_hash": ""
+  },
+  "modules/__init__.py": {
+    "mtime": 1793673847.4603982,
+    "seen": 1793734671.5287435,
+    "ast_hash": "29418ecaf5b6075c83b28c1d1ccc45e6",
+    "semantic_hash": ""
+  },
+  "modules/clinical/models.py": {
+    "mtime": 1793730676.135941,
+    "seen": 1793734671.5287435,
+    "ast_hash": "799a9dc871878a0b467664f14c0cd1f4",
+    "semantic_hash": ""
+  },
+  "modules/clinical/models_enhanced.py": {
+    "mtime": 1793675568.8197439,
+    "seen": 1793734671.5287435,
+    "ast_hash": "58de7f7a6f83a4f5aa5f6dd97822798e",
+    "semantic_hash": ""
+  },
+  "modules/clinical/router.py": {
+    "mtime": 1793749251.018555,
+    "seen": 1793757251.0279233,
+    "ast_hash": "2440074616560ddcaa2124a06e23d52f",
+    "semantic_hash": ""
+  },
+  "modules/clinical/service.py": {
+    "mtime": 1793749251.2426715,
+    "seen": 1793757251.0279233,
+    "ast_hash": "39f2d5ce8a87f1301b9ed8188ab790a5",
+    "semantic_hash": ""
+  },
+  "modules/construction/models.py": {
+    "mtime": 1793735988.0054293,
+    "seen": 1793738203.6573231,
+    "ast_hash": "d17a31764d7768e22cafdefe160c18f5",
+    "semantic_hash": ""
+  },
+  "modules/construction/models_comprehensive.py": {
+    "mtime": 1793676269.2025833,
+    "seen": 1793734671.5287435,
+    "ast_hash": "814701d44d46197f9797ecb9b6d73e51",
+    "semantic_hash": ""
+  },
+  "modules/construction/models_enhanced.py": {
+    "mtime": 1793675546.4536958,
+    "seen": 1793734671.5287435,
+    "ast_hash": "2089ea2afdad804a4d862ef174a0bb9e",
+    "semantic_hash": ""
+  },
+  "modules/construction/router.py": {
+    "mtime": 1793736041.864809,
+    "seen": 1793738203.6573231,
+    "ast_hash": "7c00457f02fd490b0370d14be986c8fa",
+    "semantic_hash": ""
+  },
+  "modules/construction/service.py": {
+    "mtime": 1793749251.5632017,
+    "seen": 1793757251.0279233,
+    "ast_hash": "33b6df11f9d1d9b3e1a6f2d5bea33d2b",
+    "semantic_hash": ""
+  },
+  "modules/maritime/models.py": {
+    "mtime": 1793730676.7202332,
+    "seen": 1793734671.5287435,
+    "ast_hash": "ca02f7dde3bab66d63c8d2dc2e429ca4",
+    "semantic_hash": ""
+  },
+  "modules/maritime/models_enhanced.py": {
+    "mtime": 1793675590.9163196,
+    "seen": 1793734671.5287435,
+    "ast_hash": "5e8190bca01a4bb9ea46dcc13d39fb6d",
+    "semantic_hash": ""
+  },
+  "modules/maritime/router.py": {
+    "mtime": 1793749251.62551,
+    "seen": 1793757251.0279233,
+    "ast_hash": "c0962c2478d863e1c9c3427189e61f81",
+    "semantic_hash": ""
+  },
+  "modules/maritime/service.py": {
+    "mtime": 1793749251.7343361,
+    "seen": 1793757251.0279233,
+    "ast_hash": "05a4b322a50e7ba823e5ea6eec0a9973",
+    "semantic_hash": ""
+  },
+  "packages/schemas.py": {
+    "mtime": 1793675355.4364622,
+    "seen": 1793734671.5287435,
+    "ast_hash": "39a266ae05ff2154ed8610162a816416",
+    "semantic_hash": ""
+  },
+  "tests/test_ai_rag.py": {
+    "mtime": 1793749251.961075,
+    "seen": 1793757251.0279233,
+    "ast_hash": "c46f9bd1a6b5e9523d9e7af9a855b263",
+    "semantic_hash": ""
+  },
+  "tests/test_api_endpoints.py": {
+    "mtime": 1793736653.3053017,
+    "seen": 1793738203.6573231,
+    "ast_hash": "4dd1341978851fcede384f9c73b9bf70",
+    "semantic_hash": ""
+  },
+  "tests/test_clinical_suite.py": {
+    "mtime": 1793749252.0551581,
+    "seen": 1793757251.0279233,
+    "ast_hash": "d806339a6a3f7bfeb92b102c474512a8",
+    "semantic_hash": ""
+  },
+  "tests/test_construction_suite.py": {
+    "mtime": 1793735949.01383,
+    "seen": 1793738203.6573231,
+    "ast_hash": "f2b2b54bc7ec4cde3c1549ef17a93d22",
+    "semantic_hash": ""
+  },
+  "tests/test_crm_crud.py": {
+    "mtime": 1793749252.1582766,
+    "seen": 1793757251.0279233,
+    "ast_hash": "a6d021a5c6a416d76ad1f0990d11d85e",
+    "semantic_hash": ""
+  },
+  "tests/test_industry_isolation.py": {
+    "mtime": 1793733128.0293837,
+    "seen": 1793734671.5287435,
+    "ast_hash": "78e82cbfdd60f808a4ddb73a428842b6",
+    "semantic_hash": ""
+  },
+  "tests/test_maritime_suite.py": {
+    "mtime": 1793735959.1767032,
+    "seen": 1793738203.6573231,
+    "ast_hash": "9dacb2a852072eaa79e2f55c755834d5",
+    "semantic_hash": ""
+  },
+  "tests/test_vertical_ai_pipeline.py": {
+    "mtime": 1793749252.383771,
+    "seen": 1793757251.0279233,
+    "ast_hash": "5a603fad8005ee908631704bbb5bd1ee",
+    "semantic_hash": ""
+  },
+  "tests/test_vertical_workflows.py": {
+    "mtime": 1793734275.5367043,
+    "seen": 1793734671.5287435,
+    "ast_hash": "83aa539e3112e5a1eb6dcaf6a15fcb27",
+    "semantic_hash": ""
+  },
+  "tests/test_workers.py": {
+    "mtime": 1793712223.862938,
+    "seen": 1793734671.5287435,
+    "ast_hash": "44a99113adb9b7953988b61ddd302989",
+    "semantic_hash": ""
+  },
+  "workers/ingestion.py": {
+    "mtime": 1793749252.5280516,
+    "seen": 1793757251.0279233,
+    "ast_hash": "f57e61c463428da7b5dd27b4ad2a79f5",
+    "semantic_hash": ""
+  },
+  "AGENTS.md": {
+    "mtime": 1793439657.3308113,
+    "seen": 1793734671.5287435,
+    "ast_hash": "11681bcf536d11d726d1cf61274b13f3",
+    "semantic_hash": ""
+  },
+  "AI_CRM_Master_Composite_Eng_plan.md": {
+    "mtime": 1793729218.1278603,
+    "seen": 1793734671.5287435,
+    "ast_hash": "9c97d99cd1c641c93c676683a25299a3",
+    "semantic_hash": ""
+  },
+  "CRM_ARCH_Change_out031126.md": {
+    "mtime": 1793712909.4638765,
+    "seen": 1793734671.5287435,
+    "ast_hash": "f6167268387f5db5c35dab456cb64985",
+    "semantic_hash": ""
+  },
+  "CRM_ARCH_plan.md": {
+    "mtime": 1793711389.5932002,
+    "seen": 1793734671.5287435,
+    "ast_hash": "32606bfb63ecacbb0967d085c5668065",
+    "semantic_hash": ""
+  },
+  "CRM_Master_execution_Checkpoint.md": {
+    "mtime": 1793730675.6192968,
+    "seen": 1793734671.5287435,
+    "ast_hash": "bd5c3e17b73939bcea40bf0b837f8c9b",
+    "semantic_hash": ""
+  },
+  "CRM_Planning/00_Planning_Summary.md": {
+    "mtime": 1793640287.1299045,
+    "seen": 1793734671.5287435,
+    "ast_hash": "4ad87b6f497eb309455f9e6f7ad181d5",
+    "semantic_hash": ""
+  },
+  "CRM_Planning/01_Project_Overview.md": {
+    "mtime": 1793640125.4071734,
+    "seen": 1793734671.5287435,
+    "ast_hash": "4d8fac112d1d33bd44556a6bb7e790b7",
+    "semantic_hash": ""
+  },
+  "CRM_Planning/02_Marketing_Site_Architecture.md": {
+    "mtime": 1793640138.2315779,
+    "seen": 1793734671.5287435,
+    "ast_hash": "96641ccf21ebb4f03e6e7b02e0d3c207",
+    "semantic_hash": ""
+  },
+  "CRM_Planning/03_Application_Architecture_Monolith.md": {
+    "mtime": 1793640160.7566633,
+    "seen": 1793734671.5287435,
+    "ast_hash": "7ed99273d465dec54fd5c5320f1e92f5",
+    "semantic_hash": ""
+  },
+  "CRM_Planning/04_Database_Schema_Design.md": {
+    "mtime": 1793640183.7798185,
+    "seen": 1793734671.5287435,
+    "ast_hash": "9da9ec5a61ffe1348c00987849cf18bc",
+    "semantic_hash": ""
+  },
+  "CRM_Planning/05_API_Design_Routing.md": {
+    "mtime": 1793640203.3620746,
+    "seen": 1793734671.5287435,
+    "ast_hash": "7e1025c59e260e7ebaa5658137e70ed3",
+    "semantic_hash": ""
+  },
+  "CRM_Planning/06_Docker_Container_Deployment.md": {
+    "mtime": 1793640224.976503,
+    "seen": 1793734671.5287435,
+    "ast_hash": "8c5af0b1745297ea838bc28ece40d6e5",
+    "semantic_hash": ""
+  },
+  "CRM_Planning/07_Implementation_Roadmap.md": {
+    "mtime": 1793640242.3127902,
+    "seen": 1793734671.5287435,
+    "ast_hash": "22a83f968a5840822ec080c5668e983b",
+    "semantic_hash": ""
+  },
+  "CRM_Planning/08_Technical_Specifications.md": {
+    "mtime": 1793640260.8317668,
+    "seen": 1793734671.5287435,
+    "ast_hash": "3b4db7da6376bf05c3c2f44e7a0d6201",
+    "semantic_hash": ""
+  },
+  "MR_Validation.md": {
+    "mtime": 1793727275.8763385,
+    "seen": 1793734671.5287435,
+    "ast_hash": "53732b4cbbea7b30be843e5b8f16fb5f",
+    "semantic_hash": ""
+  },
+  "Market_int_out.txt": {
+    "mtime": 1793726560.942619,
+    "seen": 1793734671.5287435,
+    "ast_hash": "f35984d0f451d18019903c358eccceb5",
+    "semantic_hash": ""
+  },
+  "README.md": {
+    "mtime": 1793734274.588531,
+    "seen": 1793734671.5287435,
+    "ast_hash": "adb9cbe8f85ce48b3572a42be59715e4",
+    "semantic_hash": ""
+  },
+  "SALESFORTIS_AUTONOMOUS_ENGINEER031126_all_phs.md": {
+    "mtime": 1793732539.1498618,
+    "seen": 1793734671.5287435,
+    "ast_hash": "05e9bc651a674740b4adae72e0ae54c6",
+    "semantic_hash": ""
+  },
+  "Strong_Isolation.md": {
+    "mtime": 1793731694.3401825,
+    "seen": 1793734671.5287435,
+    "ast_hash": "6d2b8d3f16f897629c459f38bbdf188e",
+    "semantic_hash": ""
+  },
+  "admin/README.md": {
+    "mtime": 1793675380.6387656,
+    "seen": 1793734671.5287435,
+    "ast_hash": "8101a55b9d08a2f2558d39966fd10065",
+    "semantic_hash": ""
+  },
+  "apps/web/index.html": {
+    "mtime": 1793642209.2274563,
+    "seen": 1793734671.5287435,
+    "ast_hash": "710c2d1e673409fe6c09c2f80fdd9d48",
+    "semantic_hash": ""
+  },
+  "docs/EXECUTION_CHECKPOINT.md": {
+    "mtime": 1793693388.0124004,
+    "seen": 1793734671.5287435,
+    "ast_hash": "7f5e1054e002b882aa9d4fe611d40b75",
+    "semantic_hash": ""
+  },
+  "docs/EXECUTION_PLAN.md": {
+    "mtime": 1793641957.6641681,
+    "seen": 1793734671.5287435,
+    "ast_hash": "cc67727b95aac18a88dc76e74c877282",
+    "semantic_hash": ""
+  },
+  "docs/IMPLEMENTATION_LOG.md": {
+    "mtime": 1793693369.8893344,
+    "seen": 1793734671.5287435,
+    "ast_hash": "dde164c0be2b744e1284960aad30cc7e",
+    "semantic_hash": ""
+  },
+  "docs/PROGRAMME_STATUS.md": {
+    "mtime": 1793693381.7796042,
+    "seen": 1793734671.5287435,
+    "ast_hash": "de2093c9fabae2c30563075e302b6b58",
+    "semantic_hash": ""
+  },
+  "docs/deployment/local-docker-topology-plan.md": {
+    "mtime": 1793734274.6806815,
+    "seen": 1793734671.5287435,
+    "ast_hash": "9bc80cfede07a794c932139635ca3658",
+    "semantic_hash": ""
+  },
+  "docs/implementation/01-current-codebase-verification.md": {
+    "mtime": 1793734274.7665308,
+    "seen": 1793734671.5287435,
+    "ast_hash": "5c6778c6b9485d52eaaac4d03dabffb1",
+    "semantic_hash": ""
+  },
+  "docs/implementation/02-shared-platform-dependency-matrix.md": {
+    "mtime": 1793731970.2823844,
+    "seen": 1793734671.5287435,
+    "ast_hash": "40ea03911b14307962a7848d5f38ecce",
+    "semantic_hash": ""
+  },
+  "docs/implementation/03-three-industry-implementation-plan.md": {
+    "mtime": 1793731970.332689,
+    "seen": 1793734671.5287435,
+    "ast_hash": "60ca77eecb6e5a99b8c205213bb4bf06",
+    "semantic_hash": ""
+  },
+  "docs/implementation/04-construction-technical-plan.md": {
+    "mtime": 1793730366.7891948,
+    "seen": 1793734671.5287435,
+    "ast_hash": "363d6818555dea41ec642ba54f844b24",
+    "semantic_hash": ""
+  },
+  "docs/implementation/05-clinical-technical-plan.md": {
+    "mtime": 1793730366.9287858,
+    "seen": 1793734671.5287435,
+    "ast_hash": "e3fa47734d12c0ae28d30611c42d5699",
+    "semantic_hash": ""
+  },
+  "docs/implementation/06-maritime-technical-plan.md": {
+    "mtime": 1793730367.6330688,
+    "seen": 1793734671.5287435,
+    "ast_hash": "699fe354941d75383c393064f586ac04",
+    "semantic_hash": ""
+  },
+  "docs/implementation/07-shared-ai-rag-enhancement-plan.md": {
+    "mtime": 1793730367.7062905,
+    "seen": 1793734671.5287435,
+    "ast_hash": "1693cfcd3478b88db8fe853d00d63bef",
+    "semantic_hash": ""
+  },
+  "docs/implementation/08-database-and-migration-plan.md": {
+    "mtime": 1793731970.3733943,
+    "seen": 1793734671.5287435,
+    "ast_hash": "83c7160ab75dd00118517d9b995c0712",
+    "semantic_hash": ""
+  },
+  "docs/implementation/09-security-and-tenant-isolation-plan.md": {
+    "mtime": 1793731970.420197,
+    "seen": 1793734671.5287435,
+    "ast_hash": "d08a8783e542c9b65bfc16f39e9928d4",
+    "semantic_hash": ""
+  },
+  "docs/implementation/10-focused-test-strategy.md": {
+    "mtime": 1793731970.4953732,
+    "seen": 1793734671.5287435,
+    "ast_hash": "8d82b0a28237d9c9b8474d64a07bd0e4",
+    "semantic_hash": ""
+  },
+  "docs/implementation/11-commercial-readiness-checklist.md": {
+    "mtime": 1793749249.114175,
+    "seen": 1793757251.0279233,
+    "ast_hash": "b31b936d0b4edd485b2d029e9a968e77",
+    "semantic_hash": ""
+  },
+  "docs/implementation/12-implementation-progress-tracker.md": {
+    "mtime": 1793749249.2158186,
+    "seen": 1793757251.0279233,
+    "ast_hash": "5ed05006a4295fe890784e927fa93921",
+    "semantic_hash": ""
+  },
+  "docs/implementation/13-production-deployment-readiness-report.md": {
+    "mtime": 1793749249.4033706,
+    "seen": 1793757251.0279233,
+    "ast_hash": "b3b83cafc398a0d9dd7bf10b5b1041e7",
+    "semantic_hash": ""
+  },
+  "docs/implementation/14-release-go-no-go-assessment.md": {
+    "mtime": 1793749249.4711895,
+    "seen": 1793757251.0279233,
+    "ast_hash": "5d5a4338015e84e764f0564624e9d344",
+    "semantic_hash": ""
+  },
+  "docs/implementation/15-final-engineering-completion-report.md": {
+    "mtime": 1793749249.536355,
+    "seen": 1793757251.0279233,
+    "ast_hash": "bc5604cf5147c8201a05228f1bff2647",
+    "semantic_hash": ""
+  },
+  "docs/implementation/execution/CHANGE_MANIFEST.md": {
+    "mtime": 1793738412.6796074,
+    "seen": 1793757251.0279233,
+    "ast_hash": "5062e063d826d7764009a7d55eefb465",
+    "semantic_hash": ""
+  },
+  "docs/implementation/execution/CHECKPOINT_REGISTER.md": {
+    "mtime": 1793749249.8294933,
+    "seen": 1793757251.0279233,
+    "ast_hash": "eba82803e45c7c4dbad1878f3c100ca0",
+    "semantic_hash": ""
+  },
+  "docs/implementation/execution/MASTER_EXECUTION_LOG.md": {
+    "mtime": 1793738414.941601,
+    "seen": 1793757251.0279233,
+    "ast_hash": "eb8b3d73e90cf214fa07861db95e3def",
+    "semantic_hash": ""
+  },
+  "docs/implementation/execution/RECOVERY_AND_RESUME.md": {
+    "mtime": 1793733126.4373775,
+    "seen": 1793734671.5287435,
+    "ast_hash": "1bddc9ab913a166924924546d8e4f610",
+    "semantic_hash": ""
+  },
+  "docs/implementation/execution/TEST_RESULTS.md": {
+    "mtime": 1793738410.491014,
+    "seen": 1793757251.0279233,
+    "ast_hash": "90966caf0734059cab22d9b55b906372",
+    "semantic_hash": ""
+  },
+  "docs/market-research/00-existing-product-baseline.md": {
+    "mtime": 1793724291.1884534,
+    "seen": 1793734671.5287435,
+    "ast_hash": "82616bc091d7146de6ca0cd040f40e82",
+    "semantic_hash": ""
+  },
+  "docs/market-research/clinical/01-trialx-analysis.md": {
+    "mtime": 1793724805.7848644,
+    "seen": 1793734671.5287435,
+    "ast_hash": "b97770144ce4f94b0f844d9f3b0626bc",
+    "semantic_hash": ""
+  },
+  "docs/market-research/clinical/02-realtime-ctms-analysis.md": {
+    "mtime": 1793726561.0630069,
+    "seen": 1793734671.5287435,
+    "ast_hash": "f0f29389c634cbff8975847defe1dc25",
+    "semantic_hash": ""
+  },
+  "docs/market-research/clinical/03-additional-competitors.md": {
+    "mtime": 1793724807.9751432,
+    "seen": 1793734671.5287435,
+    "ast_hash": "6f9cc5c7699ca8958c0eed904ae43563",
+    "semantic_hash": ""
+  },
+  "docs/market-research/clinical/04-clinical-market-gaps.md": {
+    "mtime": 1793724808.2629023,
+    "seen": 1793734671.5287435,
+    "ast_hash": "fbbacfd3fc2b4c326bc260e6ab9c1216",
+    "semantic_hash": ""
+  },
+  "docs/market-research/clinical/05-clinical-product-offerings.md": {
+    "mtime": 1793724809.397997,
+    "seen": 1793734671.5287435,
+    "ast_hash": "5f3138e7bfba16cead940943abb46888",
+    "semantic_hash": ""
+  },
+  "docs/market-research/clinical/06-clinical-positioning-and-pricing.md": {
+    "mtime": 1793724809.7785058,
+    "seen": 1793734671.5287435,
+    "ast_hash": "ba35b59fa68c2bfcd255c316289b37ec",
+    "semantic_hash": ""
+  },
+  "docs/market-research/construction/01-procore-analysis.md": {
+    "mtime": 1793724809.942845,
+    "seen": 1793734671.5287435,
+    "ast_hash": "d4962cd5ba6e22b6ecb5e0535add5f5d",
+    "semantic_hash": ""
+  },
+  "docs/market-research/construction/02-contractor-foreman-analysis.md": {
+    "mtime": 1793724810.091466,
+    "seen": 1793734671.5287435,
+    "ast_hash": "6e63d454579723a134bc0f1b05d4e867",
+    "semantic_hash": ""
+  },
+  "docs/market-research/construction/03-additional-competitors.md": {
+    "mtime": 1793724810.1958165,
+    "seen": 1793734671.5287435,
+    "ast_hash": "8df75094626920770f0a12a442591be3",
+    "semantic_hash": ""
+  },
+  "docs/market-research/construction/04-construction-market-gaps.md": {
+    "mtime": 1793724810.2668953,
+    "seen": 1793734671.5287435,
+    "ast_hash": "47c3537f5e86f0baa0a30cc790ffb5f5",
+    "semantic_hash": ""
+  },
+  "docs/market-research/construction/05-construction-product-offerings.md": {
+    "mtime": 1793724810.3520782,
+    "seen": 1793734671.5287435,
+    "ast_hash": "496b19f68ddef373843c6b4ed996af93",
+    "semantic_hash": ""
+  },
+  "docs/market-research/construction/06-construction-positioning-and-pricing.md": {
+    "mtime": 1793724810.4420626,
+    "seen": 1793734671.5287435,
+    "ast_hash": "52842208d06452c9286db3b5d61a5177",
+    "semantic_hash": ""
+  },
+  "docs/market-research/maritime/01-logitude-analysis.md": {
+    "mtime": 1793724810.5745215,
+    "seen": 1793734671.5287435,
+    "ast_hash": "94ccf510dfa85f0f0d533932a609b8ef",
+    "semantic_hash": ""
+  },
+  "docs/market-research/maritime/02-magaya-analysis.md": {
+    "mtime": 1793724810.6943326,
+    "seen": 1793734671.5287435,
+    "ast_hash": "1264d6e544c7b8c033f1162e5b00629f",
+    "semantic_hash": ""
+  },
+  "docs/market-research/maritime/03-additional-competitors.md": {
+    "mtime": 1793724810.7924833,
+    "seen": 1793734671.5287435,
+    "ast_hash": "17765e44c53ff00b24705b12ae11f151",
+    "semantic_hash": ""
+  },
+  "docs/market-research/maritime/04-maritime-market-gaps.md": {
+    "mtime": 1793724810.8926022,
+    "seen": 1793734671.5287435,
+    "ast_hash": "2733e70f8142a13b86dfd0bad11caf51",
+    "semantic_hash": ""
+  },
+  "docs/market-research/maritime/05-maritime-product-offerings.md": {
+    "mtime": 1793724810.9791484,
+    "seen": 1793734671.5287435,
+    "ast_hash": "d052fe95595005be6a550847c2b1d600",
+    "semantic_hash": ""
+  },
+  "docs/market-research/maritime/06-maritime-positioning-and-pricing.md": {
+    "mtime": 1793724811.191624,
+    "seen": 1793734671.5287435,
+    "ast_hash": "37ded7b850859fd8c26a8f2d4a52d2d0",
+    "semantic_hash": ""
+  },
+  "docs/market-research/market/01-market-overview.md": {
+    "mtime": 1793724811.32189,
+    "seen": 1793734671.5287435,
+    "ast_hash": "6dd1f403ce6c1b9b4e37403e41587c11",
+    "semantic_hash": ""
+  },
+  "docs/market-research/market/02-competitor-landscape.md": {
+    "mtime": 1793724811.4104812,
+    "seen": 1793734671.5287435,
+    "ast_hash": "6dc88f6a9fb6a69af04523a733e8da64",
+    "semantic_hash": ""
+  },
+  "docs/market-research/market/03-customer-pain-points.md": {
+    "mtime": 1793724811.5018551,
+    "seen": 1793734671.5287435,
+    "ast_hash": "7eebee65166141cd0b2130c2c46bbfec",
+    "semantic_hash": ""
+  },
+  "docs/market-research/market/04-market-opportunity-register.md": {
+    "mtime": 1793724811.6092885,
+    "seen": 1793734671.5287435,
+    "ast_hash": "7bed59a6949d612a016aa179d25c1a43",
+    "semantic_hash": ""
+  },
+  "docs/market-research/strategy/01-cross-industry-opportunities.md": {
+    "mtime": 1793724811.70114,
+    "seen": 1793734671.5287435,
+    "ast_hash": "fd609afd8ecdac5ccd7c17ac5a987c44",
+    "semantic_hash": ""
+  },
+  "docs/market-research/strategy/02-competitive-feature-matrix.md": {
+    "mtime": 1793724811.800148,
+    "seen": 1793734671.5287435,
+    "ast_hash": "3c1240b5ac5decc30c07c8e3d487827d",
+    "semantic_hash": ""
+  },
+  "docs/market-research/strategy/03-product-differentiation-strategy.md": {
+    "mtime": 1793724811.9518385,
+    "seen": 1793734671.5287435,
+    "ast_hash": "7bb06cc05db4df1dfc60e631e6dabbe0",
+    "semantic_hash": ""
+  },
+  "docs/market-research/strategy/04-commercial-packaging.md": {
+    "mtime": 1793724812.0689845,
+    "seen": 1793734671.5287435,
+    "ast_hash": "bd6a24bae1fca39d3d9cb045244051e6",
+    "semantic_hash": ""
+  },
+  "docs/market-research/strategy/05-prioritized-product-roadmap.md": {
+    "mtime": 1793724812.1714938,
+    "seen": 1793734671.5287435,
+    "ast_hash": "913af919ee2a25acdf58bad9527f333b",
+    "semantic_hash": ""
+  },
+  "docs/market-research/strategy/06-executive-product-recommendation.md": {
+    "mtime": 1793724812.2822597,
+    "seen": 1793734671.5287435,
+    "ast_hash": "91d2d1189cdffe4b8e3bfc9e027be165",
+    "semantic_hash": ""
+  },
+  "docs/product-readiness/01-research-evidence-audit.md": {
+    "mtime": 1793727576.4214487,
+    "seen": 1793734671.5287435,
+    "ast_hash": "e265c0738f68b7c80d1a94124bce87a1",
+    "semantic_hash": ""
+  },
+  "docs/product-readiness/02-existing-code-gap-matrix.md": {
+    "mtime": 1793727576.5274358,
+    "seen": 1793734671.5287435,
+    "ast_hash": "9a54a19d9f27bce15aa469ab4bbde2f1",
+    "semantic_hash": ""
+  },
+  "docs/product-readiness/03-construction-implementation-backlog.md": {
+    "mtime": 1793727576.67635,
+    "seen": 1793734671.5287435,
+    "ast_hash": "0083e6fddc556a2d3c35946f650d6e1d",
+    "semantic_hash": ""
+  },
+  "docs/product-readiness/04-maritime-implementation-backlog.md": {
+    "mtime": 1793727576.91314,
+    "seen": 1793734671.5287435,
+    "ast_hash": "da180484707af608376d25c20e1ce75d",
+    "semantic_hash": ""
+  },
+  "docs/product-readiness/05-clinical-implementation-backlog.md": {
+    "mtime": 1793727577.0217326,
+    "seen": 1793734671.5287435,
+    "ast_hash": "a6628728f0d931e476f43573ed37d1de",
+    "semantic_hash": ""
+  },
+  "docs/product-readiness/06-customer-validation-plan.md": {
+    "mtime": 1793727577.0980747,
+    "seen": 1793734671.5287435,
+    "ast_hash": "9e655b67fc96cef577b7605abf960176",
+    "semantic_hash": ""
+  },
+  "docs/product-readiness/07-launch-readiness-and-sequencing.md": {
+    "mtime": 1793727577.1552372,
+    "seen": 1793734671.5287435,
+    "ast_hash": "6ea552dd3564876fce612d32fc1d8f8a",
+    "semantic_hash": ""
+  },
+  "imp_sprint1_plan.md": {
+    "mtime": 1793728262.680717,
+    "seen": 1793734671.5287435,
+    "ast_hash": "508cad83204599e48c8f7273241b58cd",
+    "semantic_hash": ""
+  },
+  "isolation_out.txt": {
+    "mtime": 1793731909.082646,
+    "seen": 1793734671.5287435,
+    "ast_hash": "683a0820766d5513ed2319a6629f0def",
+    "semantic_hash": ""
+  },
+  "market_int_CRM_plan031126.md": {
+    "mtime": 1793724045.4284837,
+    "seen": 1793734671.5287435,
+    "ast_hash": "bc217411301287da480b8b8194d51790",
+    "semantic_hash": ""
+  },
+  "marketing/README.md": {
+    "mtime": 1793675375.2521317,
+    "seen": 1793734671.5287435,
+    "ast_hash": "11c58394f78d4d6590d23ca22454aad2",
+    "semantic_hash": ""
+  },
+  "next_dev031126.md": {
+    "mtime": 1793720652.3153653,
+    "seen": 1793734671.5287435,
+    "ast_hash": "728a27ede034eaa00ef4fff1885b7711",
+    "semantic_hash": ""
+  },
+  "next_out031126.txt": {
+    "mtime": 1793722689.179358,
+    "seen": 1793734671.5287435,
+    "ast_hash": "b209a5fff960011f5dc9e3f4a687d0c7",
+    "semantic_hash": ""
+  },
+  "packages/README.md": {
+    "mtime": 1793675349.1907115,
+    "seen": 1793734671.5287435,
+    "ast_hash": "315e038326c77e3667c20d9d5ac46cd2",
+    "semantic_hash": ""
+  },
+  "ref_for_AI_CRM.md": {
+    "mtime": 1793370358.5749662,
+    "seen": 1793734671.5287435,
+    "ast_hash": "a797bb164e28548a6be8dae02d1a5e7f",
+    "semantic_hash": ""
+  },
+  "requirements-ai.txt": {
+    "mtime": 1793712222.799062,
+    "seen": 1793734671.5287435,
+    "ast_hash": "ef24aef93a233103dbe2a6fcc9faa642",
+    "semantic_hash": ""
+  },
+  "requirements-core.txt": {
+    "mtime": 1793752004.7010374,
+    "seen": 1793757251.0279233,
+    "ast_hash": "0bca2f8de7273048f78f97efa6f9cd44",
+    "semantic_hash": ""
+  },
+  "requirements.txt": {
+    "mtime": 1793683318.6187124,
+    "seen": 1793734671.5287435,
+    "ast_hash": "661dde54894acfc1e337e600e883ef07",
+    "semantic_hash": ""
+  },
+  "update_masterplan.md": {
+    "mtime": 1793731300.2738116,
+    "seen": 1793734671.5287435,
+    "ast_hash": "251757abebba9e6b3082188ed6b0d2ac",
+    "semantic_hash": ""
+  },
+  "updated_out03112026.txt": {
+    "mtime": 1793731573.1809378,
+    "seen": 1793734671.5287435,
+    "ast_hash": "6673867a630164422a95587a1ccfb0b4",
+    "semantic_hash": ""
+  },
+  "validation_out0311.txt": {
+    "mtime": 1793727577.2348955,
+    "seen": 1793734671.5287435,
+    "ast_hash": "44f4c59863e1a9e4b91c187cabede70b",
+    "semantic_hash": ""
+  },
+  "workers/README.md": {
+    "mtime": 1793675361.3517535,
+    "seen": 1793734671.5287435,
+    "ast_hash": "666aaed602f6d15ea75360c3c39a65f4",
+    "semantic_hash": ""
+  },
+  "core/services/audit_service.py": {
+    "mtime": 1793738477.9214773,
+    "seen": 1793757251.0279233,
+    "ast_hash": "ddbd2f2d08e1beca313f27b1d09f2411",
+    "semantic_hash": ""
+  },
+  "archify/01-system-overview.md": {
+    "mtime": 1793734947.755082,
+    "seen": 1793735890.5256793,
+    "ast_hash": "5cd0bd41b68c9c8787d7e5c2bcbd8cb0",
+    "semantic_hash": ""
+  },
+  "archify/02-frontend-backend-runtime.md": {
+    "mtime": 1793757198.2250066,
+    "seen": 1793757251.0279233,
+    "ast_hash": "b7c0d034e76ab5c0ba72920db2af2565",
+    "semantic_hash": ""
+  },
+  "archify/03-database-er-model.md": {
+    "mtime": 1793734947.872792,
+    "seen": 1793735890.5256793,
+    "ast_hash": "a33e5236db4d9ec7ada0304ade0c2858",
+    "semantic_hash": ""
+  },
+  "archify/04-api-and-service-layer.md": {
+    "mtime": 1793749248.375035,
+    "seen": 1793757251.0279233,
+    "ast_hash": "03e09af37ef8d24b209e984e7d8e21db",
+    "semantic_hash": ""
+  },
+  "archify/05-docker-infrastructure.md": {
+    "mtime": 1793749248.4724839,
+    "seen": 1793757251.0279233,
+    "ast_hash": "e6a92f0e3102f1350f700b19378a6e3b",
+    "semantic_hash": ""
+  },
+  "archify/06-ai-rag-pipeline.md": {
+    "mtime": 1793749248.674738,
+    "seen": 1793757251.0279233,
+    "ast_hash": "5a6c8e2fdaa1786babefee66ad558225",
+    "semantic_hash": ""
+  },
+  "archify/07-security-isolation-boundaries.md": {
+    "mtime": 1793749248.7327957,
+    "seen": 1793757251.0279233,
+    "ast_hash": "757f220ebfd2ade60176b3130ca9f115",
+    "semantic_hash": ""
+  },
+  "archify/08-vertical-industry-modules.md": {
+    "mtime": 1793749248.82864,
+    "seen": 1793757251.0279233,
+    "ast_hash": "5df28ad1a11e40ba0e4b1bc57c3a5403",
+    "semantic_hash": ""
+  },
+  "archify/README.md": {
+    "mtime": 1793734948.2798362,
+    "seen": 1793735890.5256793,
+    "ast_hash": "e09519723a2bc087b2e367d535185271",
+    "semantic_hash": ""
+  },
+  "tests/test_security_boundaries.py": {
+    "mtime": 1793749252.3275206,
+    "seen": 1793757251.0279233,
+    "ast_hash": "3dfa808396c39a765f7d3166d69894c9",
+    "semantic_hash": ""
+  },
+  "docs/solutions/security-issues/multi-tenant-registration-hijack-and-fk-idor-prevention.md": {
+    "mtime": 1793738479.516673,
+    "seen": 1793757251.0279233,
+    "ast_hash": "013e8655f5dc81a90719e341a2928d39",
+    "semantic_hash": ""
+  },
+  "apps/web/src/components/EnterpriseWorkbench.tsx": {
+    "mtime": 1793755771.5832705,
+    "seen": 1793757251.0279233,
+    "ast_hash": "358990e20babe0ee826ab67b1ab51171",
+    "semantic_hash": ""
+  },
+  "apps/web/src/components/Icons.tsx": {
+    "mtime": 1793754721.0699277,
+    "seen": 1793757251.0279233,
+    "ast_hash": "1d1ed2013c4137e4061886763f6dadd3",
+    "semantic_hash": ""
+  },
+  "apps/web/src/pages/app/AdminConsole.tsx": {
+    "mtime": 1793752231.972069,
+    "seen": 1793757251.0279233,
+    "ast_hash": "4d619269376e0965d298695d9f521087",
+    "semantic_hash": ""
+  },
+  "apps/web/src/pages/app/workbenches/ClinicalWorkbench.tsx": {
+    "mtime": 1793756433.9759302,
+    "seen": 1793757251.0279233,
+    "ast_hash": "4d03a96a0ceaad34674de4cd4fbe42ff",
+    "semantic_hash": ""
+  },
+  "apps/web/src/pages/app/workbenches/ConstructionWorkbench.tsx": {
+    "mtime": 1793755860.8787577,
+    "seen": 1793757251.0279233,
+    "ast_hash": "7740805b7c4b72302a8b6fdd3d4f3c18",
+    "semantic_hash": ""
+  },
+  "apps/web/src/pages/app/workbenches/MaritimeWorkbench.tsx": {
+    "mtime": 1793756814.2151558,
+    "seen": 1793757251.0279233,
+    "ast_hash": "1934d160be032863ebfcdca1803b5cc5",
+    "semantic_hash": ""
+  },
+  "SALESFORTIS_REA_improve.md": {
+    "mtime": 1793755253.1293166,
+    "seen": 1793757251.0279233,
+    "ast_hash": "9b6a1dd63482c16ae4b3b257539e5c7d",
+    "semantic_hash": ""
+  },
+  "docs/competitive-ux-research/00-REA-METHODOLOGY-AND-EVIDENCE-LEDGER.md": {
+    "mtime": 1793756053.794655,
+    "seen": 1793757251.0279233,
+    "ast_hash": "8c3dee986f9d7a0d00e617ab01eb1bc0",
+    "semantic_hash": ""
+  },
+  "docs/competitive-ux-research/01-CONSTRUCTION-BENCHMARK-PROCORE-CONTRACTOR-FOREMAN.md": {
+    "mtime": 1793756056.9717288,
+    "seen": 1793757251.0279233,
+    "ast_hash": "208392f158faa0a1cd9c3fae2cf2ccc0",
+    "semantic_hash": ""
+  },
+  "docs/competitive-ux-research/02-CLINICAL-BENCHMARK-TRIALX-REALTIME-ECLINICAL.md": {
+    "mtime": 1793756061.6744285,
+    "seen": 1793757251.0279233,
+    "ast_hash": "41acb621509ce170cccc32c3a798c556",
+    "semantic_hash": ""
+  },
+  "docs/competitive-ux-research/03-MARITIME-BENCHMARK-LOGITUDE-MAGAYA.md": {
+    "mtime": 1793756064.4337945,
+    "seen": 1793757251.0279233,
+    "ast_hash": "914b514927e5ad795077302d5c00ce71",
+    "semantic_hash": ""
+  },
+  "apps/web/package-lock.json": {
+    "mtime": 1793711898.7635233,
+    "seen": 1793734671.5287435,
+    "ast_hash": "0f2da0cd13044f372fc01b616c80dbbb",
+    "semantic_hash": ""
+  }
+}

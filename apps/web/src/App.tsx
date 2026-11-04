@@ -6,7 +6,9 @@ import MaritimeMarketing from './pages/MaritimeMarketing'
 import { Login } from './pages/app/Login'
 import { Dashboard } from './pages/app/Dashboard'
 import { LeadsPipeline } from './pages/app/LeadsPipeline'
+import { CompaniesContacts } from './pages/app/CompaniesContacts'
 import { VerticalHub } from './pages/app/VerticalHub'
+import { AdminConsole } from './pages/app/AdminConsole'
 import './App.css'
 
 function App() {
@@ -19,14 +21,17 @@ function App() {
         <Route path="/vertical/clinical" element={<ClinicalMarketing />} />
         <Route path="/vertical/maritime" element={<MaritimeMarketing />} />
 
-        {/* Authentication */}
+        {/* Authentication & Workspace Registration */}
         <Route path="/login" element={<Login />} />
+        <Route path="/register" element={<Login />} />
 
         {/* Internal Authenticated CRM Portal */}
         <Route path="/app" element={<Navigate to="/app/dashboard" replace />} />
         <Route path="/app/dashboard" element={<Dashboard />} />
         <Route path="/app/leads" element={<LeadsPipeline />} />
+        <Route path="/app/contacts" element={<CompaniesContacts />} />
         <Route path="/app/verticals" element={<VerticalHub />} />
+        <Route path="/app/admin" element={<AdminConsole />} />
 
         {/* Fallback */}
         <Route path="*" element={<Navigate to="/" replace />} />

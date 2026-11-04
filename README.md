@@ -27,10 +27,10 @@ Commercial-grade, AI-native CRM tailored for specialized industry verticals:
 pip install -r requirements-core.txt
 
 # Run FastAPI with live reload
-uvicorn apps.api.main:app --reload --port 8000
+uvicorn apps.api.main:app --reload --port 8001
 ```
-- API Docs: `http://localhost:8000/docs`
-- Health check: `http://localhost:8000/api/health`
+- API Docs: `http://localhost:8001/docs`
+- Health check: `http://localhost:8001/api/health`
 
 ### 2. Frontend Application
 ```bash
